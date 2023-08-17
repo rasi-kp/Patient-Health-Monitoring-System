@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    
+    <style>
+        /* Reset some default styles */
+        body, form {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for the contact page */
+        .contact-container {
+            background-color: #05a3f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Form container */
+        .form-container {
+            background-color: #fffffff7;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        /* Form styling */
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px;
+            border-radius: 3px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            resize: none;
+        }
+
+        textarea {
+            height: 20px;
+        }
+        h2 {
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.right1{
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .center {
+  text-align: center;
+  color: rgb(254, 46, 46);
+}
+        /* Responsive styles */
+        @media screen and (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="right1" href="{{url_for('home')}}">Home</a>
+        <a class="right" href="{{url_for('logout')}}">Logout</a>
+    <div class="contact-container">
+        
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form id="email-form" name="email-form" action="{{ url_for('feedback')}}" method="post"> <!-- Update the action and method attributes to your server-side script -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="mail@gmail.com"required>
+                <label for="name">Mob no:</label>
+                <input type="name" id="no" name="no" required placeholder="+91 9605942261">
+                <label for="message">Message: (Optional)</label>
+                <textarea id="Message" name="Message" maxlength="100" placeholder="Let us know how we can help...">
+
+                </textarea>
+                <input type="submit" value="Submit">
+            </form><br>
+            <h4 class=center>{{ answer }} </h4>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History Page</title>
+    <script>
+	history.replaceState(null, null, "/login");
+</script>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            font-size: 36px;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #cccccc;
+            color: #333333;
+        }
+        .links-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .links-container a {
+            color: rgba(255, 255, 255, 0.603);
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Result -->
+    <div class="links-container">
+        <a href="{{url_for('home')}}" style="color: rgba(0, 159, 238, 0.973)">Home</a>
+        <a href="{{url_for('logout')}}" style="color: rgba(0, 159, 238, 0.973)">Logout</a>
+    </div>
+
+    <center>
+        
+        {% if account==0 %}
+            
+        <h1>Past History of {{user}}</h1><br>
+            <h2>No Past History</h2>
+              
+        {% else %}
+
+            <h1>Past History of {{ account[0]['username'] }}</h1><br>
+    
+            <table>
+              <tr>
+                    <th>Date</th>
+
+                   <th>Glucose</th>
+                   <th>BP</th>
+                   <th>Height</th>
+                   <th>Weight</th>
+                   <th>Age</th>
+                   <th>No of pregnancy</th>
+                   <th>Prediction</th>
+                </tr>
+                {% for row in account %}
+                <tr>
+                    <td>{{ row['date'] }}</td>
+
+                    <td>{{ row['glucose'] }}</td>
+                    <td>{{ row['bp'] }}</td>
+                    <td>{{ row['height'] }}</td>
+                    <td>{{ row['weight'] }}</td>
+                    <td>{{ row['age'] }}</td>
+                    <td>{{ row['pregnancy'] }}</td>
+                    <td>{{ row['predict'] }}</td>
+                </tr>
+
+                {% endfor %}
+            </table>    
+
+        {% endif %}
+
+    </center>
+
+</body>
+</html>

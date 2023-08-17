@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <meta charset="UTF-8">
+  <title>Diabetes Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <div class="login">
+      <div class="header-links">
+        <a class="right1" href="{{url_for('home')}}">Home</a>
+        <a class="right" href="{{url_for('logout')}}">Logout</a>
+      </div>
+
+      <h1>Diabetes Predictor</h1><br>
+      <form action="{{ url_for('predict')}}" method="post">
+        <div class="form-input">
+          <input type="text" name="glucose" placeholder="Glucose Level: {{glucose}}" >
+          <span class="input-icon">
+            <i class="fa fa-flask"></i>
+          </span>
+        </div>
+        <div class="form-input">
+          <input type="text" name="bp" placeholder="Blood Pressure: {{bp}}" >
+          <span class="input-icon">
+            <i class="fa fa-heartbeat"></i>
+          </span>
+        </div>
+        <div class="form-input">
+          <input type="text" name="weight" placeholder="Weight" required="required">
+          <span class="input-icon">
+            <i class="fa fa-balance-scale"></i>
+          </span>
+        </div>
+        <div class="form-input">
+          <input type="text" name="height" placeholder="Height" required="required">
+          <span class="input-icon">
+            <i class="fa fa-arrows-v"></i>
+          </span>
+        </div>
+        <div class="form-input">
+          <input type="text" name="age" placeholder="Age" required="required">
+          <span class="input-icon">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <div class="form-input">
+          <input type="text" name="pregnancy" placeholder="Number of Pregnancies" required="required">
+          <span class="input-icon">
+            <i class="fa fa-female"></i>
+          </span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </form>
+
+      <div class="prediction-text">
+        {{ prediction_text }}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

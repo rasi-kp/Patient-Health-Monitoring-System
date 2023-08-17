@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Window</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    
+</head>
+<body>
+	 <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="loader">
+					<div class="load_circle"></div>
+					<div class="load_circle"></div>
+					<div class="load_circle"></div>
+				</div>
+				<form class="login100-form validate-form" action="{{ url_for('signup')}}"method="post">
+
+					<span class="login100-form-title p-b-26">
+						Sign Up
+					</span>
+
+				    <div class="wrap-input100 validate-input">
+					    <input class="input100" type="text" name="name" id="User">
+					    <span class="focus-input100" data-placeholder="Full Name"></span>
+				    </div>
+
+				    <div class="wrap-input100 validate-input">
+					    <span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="text" name="username">
+					    <span class="focus-input100" data-placeholder="Username"></span>
+                    </div>
+                    
+					<div class="wrap-input100 validate-input">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+					    <input class="input100" type="password" name="password">
+					    <span class="focus-input100" data-placeholder="Password"></span>
+				    </div>
+
+					<div class="container-login100-form-btn">
+						<span class="alert-v" data-validate="Incorrect username or Password"></span>
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" class="login100-form-btn">
+								Register
+							</button>
+						</div>
+					</div>
+			
+					<div class="text-center p-t-15 d-f-v">
+						
+						<span class="txt1">
+							Already have an account?
+						</span>
+
+						<a class="txt2" href="{{url_for('login')}}">
+							Login
+						</a>
+					</div>
+				 </form>
+					<h4 class="center">{{ invalied }} </h4>
+		    </div>
+        </div>
+	</div>
+      
+
+</body>
+</html>

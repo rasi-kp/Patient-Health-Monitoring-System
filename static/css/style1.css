@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: linear-gradient(90deg, #0085FF, #E7F1FF);
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.right1{
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}
+h1
+ {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000e0;
+  margin-top: 18px;
+}
+
+form label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin: 20px 0 10px 20px;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: calc(100% - 40px);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 20px 20px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  background-color: #f7f7f7;
+}
+
+form input[type="submit"] {
+  background: linear-gradient(90deg, #0085FF, #0085FF);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+}
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #006cfa;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+  }
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+form input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

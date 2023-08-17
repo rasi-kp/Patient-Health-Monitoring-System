@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <script>
+    history.replaceState(null, null, "/login");
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #05a3f1;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 5px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.721);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .authors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .author {
+      width: 200px;
+      margin: 20px;
+      text-align: center;
+    }
+    .author img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .author h3 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .author p {
+      color: #666;
+      font-size: 14px;
+    }
+    .right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.right1{
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}
+  </style>
+</head>
+<body>
+  <a class="right1" href="{{url_for('home')}}">Home</a>
+        <a class="right" href="{{url_for('logout')}}">Logout</a>
+  <div class="container">
+    <h1>About Us</h1>
+    <div class="authors">
+      <div class="author">
+        <img src="static\rasi.jpeg" alt="Author 1">
+        <h3>Muhammad Rasi K P</h3>
+        <p>CSE</p>
+        <p>St Thomas College of Engineering and Technology</p>
+        <p>9605942261</p>
+      </div>
+      <div class="author">
+        <img src="static\nuha.jpeg" alt="Author 2">
+        <h3>Nuha Salih</h3>
+        <p>CSE</p>
+        <p>St Thomas College of Engineering and Technology</p>
+        <p>9605942261</p>
+      </div>
+      <div class="author">
+        <img src="static\nanditha.jpg" alt="Author 3">
+        <h3>Nanditha P</h3>
+        <p>CSE</p>
+        <p>St Thomas College of Engineering and Technology</p>
+        <p>9605942261</p>
+      </div>
+      <div class="author">
+        <img src="static\vaishnavi.jpg" alt="Author 4">
+        <h3>Vaishnavi Rajeevan</h3>
+        <p>CSE</p>
+        <p>St Thomas College of Engineering and Technology</p>
+        <p>9605942261</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
