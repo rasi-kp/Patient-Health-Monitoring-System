@@ -1,8 +1,29 @@
 # Patient-Health-Monitoring-System
 
+LOGIN PAGE
+
+<img width="960" alt="p1" src="https://github.com/rasi-kp/Patient-Health-Monitoring-System/assets/107319917/a1307f1b-cdcd-4bb0-ace2-6f8ecbb5293b">
+
+HOME PAGE
+
+<img width="959" alt="p3" src="https://github.com/rasi-kp/Patient-Health-Monitoring-System/assets/107319917/48068e0f-0690-45b0-835d-bce93286c9b2">
+
+PREDICTION PAGE
+
+<img width="959" alt="p7" src="https://github.com/rasi-kp/Patient-Health-Monitoring-System/assets/107319917/098fc02e-c7b8-45c2-b55c-610eaf925142">
+
+RESULT PAGE
+
+<img width="960" alt="p9" src="https://github.com/rasi-kp/Patient-Health-Monitoring-System/assets/107319917/5a1c3612-89e0-4122-99e1-e679b7731623">
+<img width="960" alt="p10" src="https://github.com/rasi-kp/Patient-Health-Monitoring-System/assets/107319917/fa0dd5ce-ca60-4146-b547-bd85ff667138">
+
+PAST HISTORY PAGE
+
+<img width="960" alt="p8" src="https://github.com/rasi-kp/Patient-Health-Monitoring-System/assets/107319917/bf15e359-e53e-4e38-8c18-58a78e0f9c72">
+
 ************ Database Creation ************
 
-initially to connect database and program
+initially to connect the database and program
 localhost="root" password="********"
 
 CREATE DATABASE...................................................
@@ -20,18 +41,12 @@ CREATE PATIENT DATA STORING........................................
 mysql> create table data (date DATETIME,id INT AUTO_INCREMENT,username VARCHAR(20),
 glucose INT,bp INT,weight INT,height INT,age INT,pregnancy INT,predict VARCHAR(15),PRIMARY KEY(id));
 
-SHOW TABLE COMMANT............
+SHOW TABLE COMMENT............
 mysql> show tables;
 
-TO SEE THE DATA FROM THE TABLE....
+TO SEE THE DATA FROM THE TABLE...
 mysql> select * from data;
-+------------+----+----------+---------+------+--------+--------+------+------+-------------+
-| data       | id | username | glucose | bp   | weight | height | age  | preg | pred        |
-+------------+----+----------+---------+------+--------+--------+------+------+-------------+
-| 2023-08-22 |  1 | rasi     |     104 |   62 |     49 |    170 |   21 |    0 | No Diabetes |
-| 2023-08-22 |  2 | rasi     |     100 |   50 |     49 |    170 |   50 |    1 | No Diabetes |
-+------------+----+----------+---------+------+--------+--------+------+------+-------------+
-2 rows in set (0.00 sec)
+
 
 TABLE STRUCTURE........
 mysql> describe data;
@@ -40,6 +55,8 @@ mysql> describe data;
 
 *************************** PROGRAM RUN ***************************
 
+First run model.py
+then run app.py
 
 
 
